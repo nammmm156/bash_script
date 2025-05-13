@@ -1,6 +1,6 @@
 # Dự án tự động hóa các quy trình trong Linux
 
-## CPU Monitoring
+## Lưu ý quy trình CPU Monitoring
 
 Vấn đề chúng ta gặp phải ở đây chính là khi sử dụng lệnh  ```scp``` thì sẽ cần phải nhập password. Nhưng khi chạy 1 cronjob thì công đoạn này rất khó để thực hiện, vì vậy ở đây chúng ta sẽ cần tạo một SSH key và sau đó copy public key đến máy đích. Để thực hiện điều đó, đầu tiên ta sẽ dùng lệnh: 
 
@@ -22,4 +22,4 @@ Sau đó ta sẽ dùng lệnh:
 ssh-copy-id ducnam@192.168.6.111
 ```
 để gửi khóa công khai sang máy đích và bạn sẽ nhập mật khẩu như thường. Và sau khi hoàn thành thì bạn sẽ không cần nhập mật khẩu ở những lần sau nữa.
-
+Và sau đó thì chúng ta sẽ cấu hình cronjob như bình thường bằng lệnh ```cronjob -e``` giống như các quy trình còn lại.
